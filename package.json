@@ -1,0 +1,24 @@
+{
+  "name": "reparaciones-juanpa",
+  "version": "1.0.0",
+  "description": "Sistema de gestión de reparaciones IT con FastAPI y React",
+  "scripts": {
+    "dev": "concurrently \"cd backend && uvicorn main:app --reload\" \"cd frontend && npm run dev\"",
+    "build": "cd frontend && npm run build",
+    "start:backend": "cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT",
+    "start:frontend": "cd frontend && npm run preview -- --host 0.0.0.0 --port 3000",
+    "start:prod": "npm run start:backend",
+    "install:all": "cd backend && pip install -r requirements.txt && cd ../frontend && npm install"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.9.0"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {},
+  "keywords": ["fastapi", "react", "reparaciones", "it"],
+  "author": "Tu Nombre",
+  "license": "MIT"
+}

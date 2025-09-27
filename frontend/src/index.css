@@ -1,0 +1,263 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    #f1f5f9 0px,
+    #e2e8f0 40px,
+    #f1f5f9 80px
+  );
+  background-size: 200px;
+}
+
+/* Drag and drop styles */
+.dragging {
+  opacity: 0.5;
+  transform: rotate(5deg);
+  transition: all 0.2s ease;
+}
+
+.drag-over {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: #3b82f6;
+  border-style: dashed;
+  border-width: 2px;
+}
+
+/* Status indicators */
+.status-ingresado {
+  @apply border-l-4 border-l-red-500;
+}
+
+.status-diagnosticada {
+  @apply border-l-4 border-l-yellow-500;
+}
+
+.status-para-entregar {
+  @apply border-l-4 border-l-blue-500;
+}
+
+.status-listos {
+  @apply border-l-4 border-l-green-500;
+}
+
+/* Priority indicators */
+.priority-high {
+  @apply bg-red-50 border-red-200;
+}
+
+.priority-normal {
+  @apply bg-white border-gray-200;
+}
+
+.priority-low {
+  @apply bg-gray-50 border-gray-200;
+}
+
+/* Custom focus styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Loading states */
+.loading-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+/* Form styles */
+.form-input {
+  @apply block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+.form-error {
+  @apply mt-1 text-sm text-red-600;
+}
+
+/* Button styles */
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200;
+}
+
+.btn-primary {
+  @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+}
+
+.btn-secondary {
+  @apply btn bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500;
+}
+
+.btn-success {
+  @apply btn bg-green-600 text-white hover:bg-green-700 focus:ring-green-500;
+}
+
+.btn-warning {
+  @apply btn bg-yellow-500 text-white hover:bg-yellow-600 focus:ring-yellow-400;
+}
+
+.btn-danger {
+  @apply btn bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+}
+
+/* Card styles */
+/* Eliminado uso de clases inexistentes shadow-card */
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .mobile-scroll {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .mobile-tap {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /* Modal mobile styles */
+  .modal-mobile {
+    @apply w-full h-full max-w-none max-h-none rounded-none;
+  }
+
+  .modal-content-mobile {
+    @apply h-full overflow-y-auto;
+  }
+
+  /* Fix modal scroll on mobile */
+  .modal-dark {
+    max-height: 100vh !important;
+    height: 100vh !important;
+  }
+
+  .modal-dark .flex-1 {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+  }
+}
+
+/* Dark theme modal styles */
+.modal-dark {
+  background: linear-gradient(145deg, #1f2937 0%, #111827 100%);
+}
+
+/* Modal scroll improvements */
+.modal-dark .flex-1 {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+.modal-dark .flex-1::-webkit-scrollbar {
+  width: 4px;
+}
+
+.modal-dark .flex-1::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-dark .flex-1::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+  border-radius: 2px;
+}
+
+.modal-dark .flex-1::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+.modal-dark .form-input-dark {
+  @apply bg-white text-gray-900 border-gray-300 focus:border-blue-500 focus:ring-blue-500;
+}
+
+.modal-dark .form-input-dark::placeholder {
+  @apply text-gray-500;
+}
+
+/* Toggle switch animations */
+.toggle-switch {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-switch-thumb {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Camera button styles */
+.camera-button {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.camera-button:hover {
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Image preview styles */
+.image-preview {
+  @apply relative overflow-hidden rounded-lg;
+}
+
+.image-preview::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 49%, rgba(255,255,255,0.1) 50%, transparent 51%);
+  pointer-events: none;
+}

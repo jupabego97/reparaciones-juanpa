@@ -1,0 +1,50 @@
+[
+  {
+    "id": "pc-01",
+    "name": "Laptop Pro 14",
+    "description": "Intel Core i7, 16GB RAM, 512GB SSD, 14\"",
+    "price": 1299,
+    "category": "computadores",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "pc-02",
+    "name": "Laptop Ultralight 13",
+    "description": "Intel Core i5, 8GB RAM, 256GB SSD, 13\"",
+    "price": 899,
+    "category": "computadores",
+    "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "pc-03",
+    "name": "Desktop Gamer RTX",
+    "description": "Ryzen 7, 32GB RAM, RTX 4070, 1TB NVMe",
+    "price": 1999,
+    "category": "computadores",
+    "image": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "sp-01",
+    "name": "Parlantes Stereo X2",
+    "description": "Bluetooth 5.0, Sonido 360°, Batería 12h",
+    "price": 149,
+    "category": "parlantes",
+    "image": "https://images.unsplash.com/photo-1518441902113-c1d3b5d0f803?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "sp-02",
+    "name": "Barra de Sonido 2.1",
+    "description": "Subwoofer inalámbrico, HDMI ARC, 200W",
+    "price": 299,
+    "category": "parlantes",
+    "image": "https://images.unsplash.com/photo-1546900703-cf06143d1239?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "sp-03",
+    "name": "Parlante Portátil IPX7",
+    "description": "Resistente al agua, USB-C, 20W",
+    "price": 99,
+    "category": "parlantes",
+    "image": "https://images.unsplash.com/photo-1585386959984-a4155223168f?q=80&w=1200&auto=format&fit=crop"
+  }
+]
