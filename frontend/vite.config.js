@@ -19,6 +19,12 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: false,
     rollupOptions: {
+      external: [
+        // Excluir archivos de debug
+        /debug_service\.js$/,
+        /\.debug\.js$/,
+        /\.test\.js$/
+      ],
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
